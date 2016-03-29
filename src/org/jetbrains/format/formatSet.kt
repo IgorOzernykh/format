@@ -133,10 +133,10 @@ abstract class FormatSet (
     }
 }
 
-fun Format.minus(f: FormatSet): FormatSet = FormatSet.initial(f.width, this) - f
-fun Format.mod  (f: FormatSet): FormatSet = FormatSet.initial(f.width, this) % f
-fun Format.div  (f: FormatSet): FormatSet = FormatSet.initial(f.width, this) / f
-fun Format.plus (f: FormatSet): FormatSet = FormatSet.initial(f.width, this) + f
+operator fun Format.minus(f: FormatSet): FormatSet = FormatSet.initial(f.width, this) - f
+operator fun Format.mod  (f: FormatSet): FormatSet = FormatSet.initial(f.width, this) % f
+operator fun Format.div  (f: FormatSet): FormatSet = FormatSet.initial(f.width, this) / f
+operator fun Format.plus (f: FormatSet): FormatSet = FormatSet.initial(f.width, this) + f
 
 class FormatList(
   width: Int
